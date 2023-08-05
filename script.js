@@ -1,6 +1,4 @@
-document.getElementById('arbitrageForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
+function calculateArbitrage() {
     const odds1 = parseFloat(document.getElementById('odds1').value);
     const odds2 = parseFloat(document.getElementById('odds2').value);
     const betAmount1 = parseFloat(document.getElementById('betAmount1').value);
@@ -14,4 +12,4 @@ document.getElementById('arbitrageForm').addEventListener('submit', function(eve
 
     document.getElementById('arbitrageAmount').textContent = arbitrageAmount.toFixed(2);
     document.getElementById('result').classList.remove('hidden');
-});
+}
