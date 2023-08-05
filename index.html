@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Arbitragem de Apostas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Arbitragem de Apostas</h1>
+        <form id="arbitrageForm">
+            <label for="odds1">Odds Casa de Apostas 1:</label>
+            <input type="number" step="0.01" id="odds1" required>
+
+            <label for="odds2">Odds Casa de Apostas 2:</label>
+            <input type="number" step="0.01" id="odds2" required>
+
+            <label for="betAmount1">Valor da Aposta na Casa de Apostas 1:</label>
+            <input type="number" step="0.01" id="betAmount1" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Resultado:</h2>
+            <p>Valor da Aposta na Casa de Apostas 2 para Arbitragem:</p>
+            <p id="arbitrageAmount"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
