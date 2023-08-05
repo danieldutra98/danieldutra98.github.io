@@ -8,7 +8,7 @@ function calculateArbitrage() {
         return;
     }
 
-    const totalInvestment = 100; // Defina o valor total que você deseja investir (pode ser alterado conforme sua preferência)
+    const totalInvestment = 200;
     const totalOdds = 1 / odds1 + 1 / oddsDraw + 1 / odds2;
     const betAmount1 = (totalInvestment / (odds1 * totalOdds)).toFixed(2);
     const betAmountDraw = (totalInvestment / (oddsDraw * totalOdds)).toFixed(2);
