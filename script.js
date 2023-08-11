@@ -6,7 +6,7 @@ function calculateNextNumber() {
 
     if (numbers.length > 0) {
         const lastNumber = numbers[numbers.length - 1];
-        const nextNumber = lastNumber + 1; // Lógica simples, pode ser ajustada
+        const nextNumber = lastNumber + 1;
 
         document.getElementById('nextNumber').textContent = `Próximo Número: ${nextNumber}`;
     } else {
