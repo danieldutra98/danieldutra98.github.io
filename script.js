@@ -1,21 +1,15 @@
-function calculateArbitrage() {
-    const odds1 = parseFloat(document.getElementById('odds1').value);
-    const oddsDraw = parseFloat(document.getElementById('oddsDraw').value);
-    const odds2 = parseFloat(document.getElementById('odds2').value);
+document.getElementById('calculateButton').addEventListener('click', calculateNextNumber);
 
-    if (odds1 <= 0 || oddsDraw <= 0 || odds2 <= 0) {
-        alert('Por favor, insira valores válidos.');
-        return;
+function calculateNextNumber() {
+    const sequenceInput = document.getElementById('sequenceInput').value;
+    const numbers = sequenceInput.split(',').map(Number);
+
+    if (numbers.length > 0) {
+        const lastNumber = numbers[numbers.length - 1];
+        const nextNumber = lastNumber + 1; // Lógica simples, pode ser ajustada
+
+        document.getElementById('nextNumber').textContent = `Próximo Número: ${nextNumber}`;
+    } else {
+        document.getElementById('nextNumber').textContent = 'Insira uma sequência de números válida.';
     }
-
-    const totalInvestment = 100; 100
-    const totalOdds = 1 / odds1 + 1 / oddsDraw + 1 / odds2;
-    const betAmount1 = (totalInvestment / (odds1 * totalOdds)).toFixed(2);
-    const betAmountDraw = (totalInvestment / (oddsDraw * totalOdds)).toFixed(2);
-    const betAmount2 = (totalInvestment / (odds2 * totalOdds)).toFixed(2);
-
-    document.getElementById('betAmount1').textContent = betAmount1;
-    document.getElementById('betAmountDraw').textContent = betAmountDraw;
-    document.getElementById('betAmount2').textContent = betAmount2;
-    document.getElementById('result').classList.remove('hidden');
 }
