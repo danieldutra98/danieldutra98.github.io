@@ -1,31 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Calculadora de Arbitragem de Apostas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequência de Números</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de Arbitragem de Apostas</h1>
-        <form id="arbitrageForm">
-            <label for="odds1">Odds Time 1:</label>
-            <input type="number" step="0.01" id="odds1" required>
-
-            <label for="oddsDraw">Odds Empate:</label>
-            <input type="number" step="0.01" id="oddsDraw" required>
-
-            <label for="odds2">Odds Time 2:</label>
-            <input type="number" step="0.01" id="odds2" required>
-
-            <button type="button" onclick="calculateArbitrage()">Calcular</button>
-        </form>
-
-        <div id="result" class="hidden">
-            <h2>Resultado:</h2>
-            <p>Quantia para Apostar no Time 1: <span id="betAmount1"></span></p>
-            <p>Quantia para Apostar no Empate: <span id="betAmountDraw"></span></p>
-            <p>Quantia para Apostar no Time 2: <span id="betAmount2"></span></p>
-        </div>
+        <h1>Calculadora de Próximo Número</h1>
+        <p>Insira a sequência de números separados por vírgula:</p>
+        <textarea id="sequenceInput" rows="4" cols="50"></textarea>
+        <button id="calculateButton">Calcular Próximo Número</button>
+        <p id="nextNumber">Próximo Número: </p>
     </div>
     <script src="script.js"></script>
 </body>
